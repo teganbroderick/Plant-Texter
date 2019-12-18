@@ -4,6 +4,8 @@ from flask_debugtoolbar import DebugToolbarExtension
 from darksky import forecast
 from datetime import date, timedelta
 
+import os
+
 app = Flask(__name__)
 
 # Required to use Flask sessions and the debug toolbar
@@ -14,6 +16,9 @@ app.secret_key = "ABC"
 # error.
 app.jinja_env.undefined = StrictUndefined
 
+dark_sky = ({
+    'api_key':os.environ.get('DARK_SKY_API'),
+    })
 
 @app.route('/')
 def index():
@@ -22,7 +27,7 @@ def index():
     BERKELEY = 37.877360, -122.296730
 
     weekday = date.today()
-    with forecast("API_KEY", *BERKELEY) as berkeley:
+    with forecast(dark_sky['api_key'], *BERKELEY) as berkeley:
         print(berkeley.daily.summary, end='\n---\n')
     for day in berkeley.daily:
         day = dict(day = date.strftime(weekday, '%a'),
