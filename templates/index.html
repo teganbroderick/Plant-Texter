@@ -6,7 +6,8 @@
 <body>
     <h1>Does Tegan need to water her plants today?</h1>
     {% if max_temp_array[0] > 80 %}
-        {{ 'YES' }}
+        {{ 'YES' }} <br>
+        {{ 'It is unseasonably warm today. You should consider giving your plants some extra water'}}
     {% else %}
         {{ 'NO' }}
     {% endif %}

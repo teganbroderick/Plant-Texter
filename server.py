@@ -4,6 +4,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from darksky import forecast
 from datetime import date, timedelta
 
+import helpers
 import os
 
 app = Flask(__name__)
@@ -20,7 +21,7 @@ dark_sky = os.environ['DARK_SKY_API']
 
 @app.route('/')
 def index():
-    """Render index.html"""
+    """Get weather, render index.html"""
     
     BERKELEY = 37.877360, -122.296730
 
@@ -40,8 +41,12 @@ def index():
                    tempMin = day.temperatureMin,
                    tempMax = day.temperatureMax
                    )
-        week_summary.append('{day}: {sum} Temp range: {tempMin} - {tempMax}'.format(**day))
-        max_temp_array.append(day['tempMax'])
+        min_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMin'])
+        max_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMax'])
+        max_temp_array.append(max_temp_in_celcius)
+        week_summary_string = day['day'] + ':' + day['sum'] + 'Temp range:' + str(min_temp_in_celcius) + '-' + str(max_temp_in_celcius)
+        week_summary.append(week_summary_string)
+         
         weekday += timedelta(days=1)
 
     return render_template("index.html", weekly_report=berkeley.daily, week_summary=week_summary, max_temp_array=max_temp_array)
