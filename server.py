@@ -24,19 +24,27 @@ def index():
     
     BERKELEY = 37.877360, -122.296730
 
-    weekday = date.today()
+    
     with forecast(dark_sky, *BERKELEY) as berkeley:
+        print(berkeley.daily)
         print(berkeley.daily.summary, end='\n---\n')
+
+    todays_weather = 100
+
+    weekday = date.today()
+    week_summary = []
+    max_temp_array = []
     for day in berkeley.daily:
         day = dict(day = date.strftime(weekday, '%a'),
                    sum = day.summary,
                    tempMin = day.temperatureMin,
                    tempMax = day.temperatureMax
                    )
-        print('{day}: {sum} Temp range: {tempMin} - {tempMax}'.format(**day))
+        week_summary.append('{day}: {sum} Temp range: {tempMin} - {tempMax}'.format(**day))
+        max_temp_array.append(day['tempMax'])
         weekday += timedelta(days=1)
 
-    return render_template("index.html")
+    return render_template("index.html", weekly_report=berkeley.daily, week_summary=week_summary, max_temp_array=max_temp_array)
 
 
 if __name__ == "__main__":

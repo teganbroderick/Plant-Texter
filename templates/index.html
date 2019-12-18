@@ -4,9 +4,19 @@
     <title>Plant Texter</title>
 </head>
 <body>
-    <h1>Plant Texter</h1>
-    <h3> The weather today in Berkeley is (insert weather here).</h3>
-    <p>You (do or do not) need to water your plants today</p>
+    <h1>Does Tegan need to water her plants today?</h1>
+    {% if max_temp_array[0] > 80 %}
+        {{ 'YES' }}
+    {% else %}
+        {{ 'NO' }}
+    {% endif %}
+    <h3> The weather today in Berkeley today has high of {{ max_temp_array[0] }}.</h3>
+    <h3>Weekly weather summary:</h3>
+    {{ weekly_report.summary }}
+    <h3>Weekly weather report:</h3>
+    {% for item in week_summary %}
+        {{ item }} <br>
+    {% endfor %}  
 </body>
 </html>
 
