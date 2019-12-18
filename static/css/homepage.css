@@ -1,0 +1,12 @@
+#main-yes-or-no {
+    font-size: 300px;
+    font-style: bold;
+}
+
+body {
+    background: #333 url("/static/img/plant_minimal.jpg");
+    background-size: cover;
+
+    color: black;
+    text-align: center;
+}
