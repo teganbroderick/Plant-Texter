@@ -22,16 +22,12 @@
 </head>
 <body>
     <!-- Div for bootstrap formatting -->
-    <div class="container-fluid">
+    <div class="container-fluid">   
         <div class="row">
-            <div class="col-12">
-                <h1>Does Tegan need to water her plants today?</h1>
+            <div class="col-2 ">
             </div>
-        </div>    
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-8 text-center">
+            <div class="col-8 text-center align-top">
+                <p class="tiny-text">Does Tegan need to water her plants today?</p>
                 {% if max_temp_array[0] > 25 %}
                     {{ 'YES' }} <br>
                     {{ 'It is unseasonably warm today. You should consider giving your plants some extra water.'}}

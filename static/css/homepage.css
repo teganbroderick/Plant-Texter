@@ -3,6 +3,10 @@
     font-style: bold;
 }
 
+.tiny-text {
+    font-size: 12px;
+}
+
 body {
     background: #333 url("/static/img/plant_minimal.jpg");
     background-size: cover;
