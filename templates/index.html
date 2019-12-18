@@ -29,8 +29,8 @@
             <div class="col-8 text-center align-top">
                 <p class="tiny-text">Does Tegan need to water her plants today?</p>
                 {% if max_temp_array[0] > 25 %}
-                    {{ 'YES' }} <br>
-                    {{ 'It is unseasonably warm today. You should consider giving your plants some extra water.'}}
+                    <h1 id="main-yes-or-no">{{ 'YES' }}</h1> <br>
+                    <p class="tiny-text">{{ 'It is unseasonably warm today. You should consider giving your plants some extra water.'}}</p>
                 {% else %}
                     <h1 id="main-yes-or-no">{{ 'NO' }}</h1>
                 {% endif %}  
