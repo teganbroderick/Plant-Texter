@@ -44,7 +44,7 @@ def index():
         min_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMin'])
         max_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMax'])
         max_temp_array.append(max_temp_in_celcius)
-        week_summary_string = day['day'] + ':' + day['sum'] + 'Temp range:' + str(min_temp_in_celcius) + '-' + str(max_temp_in_celcius)
+        week_summary_string = day['day'] + ': ' + day['sum'] + ' Temp range: ' + str(min_temp_in_celcius) + '-' + str(max_temp_in_celcius)
         week_summary.append(week_summary_string)
          
         weekday += timedelta(days=1)
