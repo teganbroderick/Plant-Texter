@@ -16,9 +16,7 @@ app.secret_key = "ABC"
 # error.
 app.jinja_env.undefined = StrictUndefined
 
-dark_sky = ({
-    'api_key':os.environ.get('DARK_SKY_API'),
-    })
+dark_sky = os.environ['DARK_SKY_API']
 
 @app.route('/')
 def index():
@@ -27,7 +25,7 @@ def index():
     BERKELEY = 37.877360, -122.296730
 
     weekday = date.today()
-    with forecast(dark_sky['api_key'], *BERKELEY) as berkeley:
+    with forecast(dark_sky, *BERKELEY) as berkeley:
         print(berkeley.daily.summary, end='\n---\n')
     for day in berkeley.daily:
         day = dict(day = date.strftime(weekday, '%a'),
