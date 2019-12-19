@@ -10,11 +10,13 @@
 
 .modal-weather-header {
     font-size: 18px;
+    text-decoration: underline;
 }
 
 .modal-weather-header-main {
-    font-size: 18px;
+    font-size: 20px;
     font-style: bold;
+
 }
 
 body {
