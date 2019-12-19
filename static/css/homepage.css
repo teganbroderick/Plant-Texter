@@ -20,8 +20,9 @@
 }
 
 body {
-    background: #333 url("/static/img/plant_minimal.jpg");
+    background: #333 url("/static/img/green-succulent-plants-on-pots-1470171.jpg");
     background-size: cover;
+    height: 100%
 
     color: black;
     text-align: center;
