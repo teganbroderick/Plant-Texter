@@ -30,7 +30,7 @@ def send_sms():
         message = client.messages.create(
             from_=from_number, 
             to=my_number,
-            body="It is unseasonably warm today. You should consider giving your plants some extra water.")
+            body=emoji.emojize("It is unseasonably warm today. You should consider giving your plants some extra water. :seedling:"))
 
         print(message.sid)      
 
