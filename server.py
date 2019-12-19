@@ -28,7 +28,7 @@ def index():
     with forecast(dark_sky, *BERKELEY) as berkeley:
         weekday = date.today()
         
-        week_summary = []
+        weekly_summary = []
         max_temp_array = []
         
         for day in berkeley.daily:
@@ -40,12 +40,12 @@ def index():
             min_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMin'])
             max_temp_in_celcius = helpers.convert_fahrenheit_to_celcius(day['tempMax'])
             max_temp_array.append(max_temp_in_celcius)
-            week_summary_string = day['day'] + ': ' + day['sum'] + ' Temp range: ' + str(min_temp_in_celcius) + '-' + str(max_temp_in_celcius)
-            week_summary.append(week_summary_string)
+            weekly_summary_string = day['day'] + ': ' + day['sum'] + ' Temp range: ' + str(min_temp_in_celcius) + '-' + str(max_temp_in_celcius)
+            weekly_summary.append(week_summary_string)
              
             weekday += timedelta(days=1)
 
-    return render_template("index.html", weekly_report=berkeley.daily, week_summary=week_summary, max_temp_array=max_temp_array)
+    return render_template("index.html", weekly_report=berkeley.daily, weekly_summary=weekly_summary, max_temp_array=max_temp_array)
 
 
 if __name__ == "__main__":
