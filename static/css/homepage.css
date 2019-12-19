@@ -7,6 +7,16 @@
     font-size: 12px;
 }
 
+
+.modal-weather-header {
+    font-size: 18px;
+}
+
+.modal-weather-header-main {
+    font-size: 18px;
+    font-style: bold;
+}
+
 body {
     background: #333 url("/static/img/plant_minimal.jpg");
     background-size: cover;
