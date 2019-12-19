@@ -1,5 +1,6 @@
 Click==7.0
 darkskylib==0.3.91
+emoji=0.5.4
 Flask==1.1.1
 Flask-DebugToolbar==0.10.1
 itsdangerous==1.1.0

@@ -2,6 +2,7 @@ from twilio.rest import Client
 import schedule
 from darksky import forecast
 from datetime import date, timedelta
+import emoji
 
 import helpers
 import os
