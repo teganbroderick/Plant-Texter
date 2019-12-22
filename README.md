@@ -1,6 +1,6 @@
 # Plant Texter
 
-Plant texter is an app that sends me an sms when it is particularly hot and tells me to water my plants.
+Plant Texter is an app that sends me a text message when the weather in Berkeley is over 25 degrees celcius, reminding me to water my plants. The app has two main features - a website that displays weather information and tells me whether I need to water my plants, and the scheduled sms reminder.
 
 ### Tech Stack
 Python, HTML, CSS, Flask, Jinja, Bootstrap <br>
@@ -48,7 +48,7 @@ $ python3 scheduler.py
 ### Features
 
 #### Index Page <br>
-The index page asks the question: "Does Tegan need to water her plants today?". It displays "YES" if the maximum temperature for the day is greater than or equal to 25 degrees celcius, and "NO" if not. A Weather Summary button brings up a modal displaying weather information for that day and the week ahead.
+The index page asks the question: "Does Tegan need to water her plants today?". It displays "YES" if the maximum temperature for the day in Berkeley is >= 25 degrees celcius, and "NO" if not. A Weather Summary button brings up a modal displaying weather information for that day and the week ahead.
 ![Index_no](https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-index.gif)
 <br><br>
 ![Index_yes](https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-index-yes.png)
