@@ -55,5 +55,5 @@ The index page asks the question: "Does Tegan need to water her plants today?". 
 
 
 #### SMS Feature <br>
-Every day at 9am, a scheduler checks the maximum temperature in Berkeley for the day. If it is greater than or equal to 25 degrees celcius, I receive a text message telling me to consider giving my plants some extra water.
+Every day at 9am, a scheduler checks the maximum temperature in Berkeley for the day. If it is greater than or equal to 25 degrees celcius, I receive a text message telling me to consider giving my plants some extra water. <br>
 <img src="https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-sms.png" width="40%" height="40%"/>
