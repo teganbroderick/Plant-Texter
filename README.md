@@ -48,12 +48,12 @@ $ python3 scheduler.py
 ### Features
 
 #### Index Page <br>
-The index page asks the question: "Does Tegan need to water her plants today?". It displays "YES" if the maximum temperature for the day in Berkeley is >= 25 degrees celcius, and "NO" if not. A Weather Summary button brings up a modal displaying weather information for that day and the week ahead.
+The index page asks the question: "Does Tegan need to water her plants today?". It displays "YES" if the maximum temperature for the day in Berkeley is >= 25 degrees celcius, and "NO" if not. A Weather Summary button brings up a modal displaying weather information for that day and the week ahead. <br>
 ![Index_no](https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-index.gif)
 <br><br>
-![Index_yes](https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-index-yes.png)
-<br>
+<img src="https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-index-yes.png" width="62%" height="62%"/>
+
 
 #### SMS Feature <br>
 Every day at 9am, a scheduler checks the maximum temperature in Berkeley for the day. If it is greater than or equal to 25 degrees celcius, I receive a text message telling me to consider giving my plants some extra water.
-![Index_yes](https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-sms.png)
+<img src="https://raw.githubusercontent.com/teganbroderick/plant-texter/master/static/img/plant-texter-sms.png" width="40%" height="40%"/>
